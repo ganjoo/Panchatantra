@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/onboarding.unity
+    guid: c314468d1e1a8b3419eb92ce584b034a
+  - enabled: 1
+    path: Assets/video_listing.unity
+    guid: 784d5d88e71581749a213ff506644311
