@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/onboarding.unity
-    guid: c314468d1e1a8b3419eb92ce584b034a
+    path: Assets/onboarding_screen_1.unity
+    guid: cb806f9f8278e5a44a55ce960d6b402b
+  - enabled: 1
+    path: Assets/onboarding_screen_2.unity
+    guid: c276d90fcae233548988defc93d970ea
+  - enabled: 1
+    path: Assets/onboarding_screen_3.unity
+    guid: e5105fd3b132a0a46814c0b2ce6e57e8
+  - enabled: 1
+    path: Assets/Login_with_facebook.unity
+    guid: fccff66d87d5db64d80008817d26996e
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: c6854ec3f2e489649978a3c95c4ef371
   - enabled: 1
     path: Assets/video_listing.unity
     guid: 784d5d88e71581749a213ff506644311

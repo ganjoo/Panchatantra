@@ -2994,9 +2994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9199e5573ffd14da69df1212c90868e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMenuItem: 1
-  menuItemAngle: 0
-  distanceBetweenMenus: 4
+  startingMenuItem: 2
+  menuItemAngle: 50
+  distanceBetweenMenus: 2
   zOffsetForCentredItem: 0.5
   menuItems:
   - {fileID: 1347007604}
