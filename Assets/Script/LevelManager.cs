@@ -1,9 +1,17 @@
-﻿using UnityEngine;
-using GetSocialSdk.Ui;
-using GetSocialSdk.Core;
+﻿
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using System.IO;
 
 public class LevelManager : MonoBehaviour
 {
+    private bool isProcessing = false;
+
+    private string shareText = "Which Hollywood Movie does this PICTURE represent?\n";
+    private string gameLink = "Download the game on play store at " + "\nhttps://play.google.com/store/apps/details?id=com.TGC.guessthemovie&pcampaignid=GPC_shareGame";
+    private string subject = "Rebus Guess The Movie Game";
+    private string imageName = "share"; // without the extension, for iinstance, MyPic 
 
     public void LoadLevel(string name)
     {
@@ -11,15 +19,69 @@ public class LevelManager : MonoBehaviour
 #pragma warning disable CS0618 // Type or member is obsolete
         Application.LoadLevel(name);
 #pragma warning restore CS0618 // Type or member is obsolete
-        GetSocial.Init();
-        bool wasShown = GetSocialUi.CreateInvitesView().Show();
-        Debug.Log("Smart Invites view was shown: " + wasShown);
-        GetSocial.SendInvite(InviteChannelIds.Email,
-    onComplete: () => Debug.Log("Invitation via EMAIL was sent"),
-    onCancel: () => Debug.Log("Invitation via EMAIL was cancelled"),
-    onFailure: (error) => Debug.LogError("Invitation via EMAIL failed, error: " + error.Message)
-);
+        
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width * 0.8f && Input.mousePosition.y < Screen.height * 0.2f)
+        {
+         
+        }
+    }
+    public void shareImage()
+    {
+        AndroidRuntimePermissions.Permission result = AndroidRuntimePermissions.RequestPermission("android.permission.WRITE_EXTERNAL_STORAGE");
+        if (result == AndroidRuntimePermissions.Permission.Granted)
+            Debug.Log("We have permission to access external storage!");
+        else
+            Debug.Log("Permission state: " + result);
+
+        // Requesting WRITE_EXTERNAL_STORAGE and CAMERA permissions simultaneously
+        //AndroidRuntimePermissions.Permission[] result = AndroidRuntimePermissions.RequestPermissions( "android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.CAMERA" );
+        //if( result[0] == AndroidRuntimePermissions.Permission.Granted && result[1] == AndroidRuntimePermissions.Permission.Granted )
+        //	Debug.Log( "We have all the permissions!" );
+        //else
+        //	Debug.Log( "Some permission(s) are not granted..." );
+        if (!isProcessing)
+            StartCoroutine(ShareScreenshot());
 
     }
 
+    private IEnumerator ShareScreenshot()
+    {
+        isProcessing = true;
+        yield return new WaitForEndOfFrame();
+
+        Texture2D screenTexture = new Texture2D(1080, 1080, TextureFormat.RGB24, true);
+        screenTexture.Apply();
+
+        byte[] dataToSave = Resources.Load<TextAsset>(imageName).bytes;
+
+        string destination = Path.Combine(Application.persistentDataPath, System.DateTime.Now.ToString("yyyy-MM-dd-HHmmss") + ".png");
+        Debug.Log(destination);
+        File.WriteAllBytes(destination, dataToSave);
+
+        if (!Application.isEditor)
+        {
+
+            AndroidJavaClass intentClass = new AndroidJavaClass("android.content.Intent");
+            AndroidJavaObject intentObject = new AndroidJavaObject("android.content.Intent");
+            intentObject.Call<AndroidJavaObject>("setAction", intentClass.GetStatic<string> ("ACTION_SEND"));
+            AndroidJavaClass uriClass = new AndroidJavaClass("android.net.Uri");
+            AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file://" + destination);
+            intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_STREAM"), uriObject);
+            intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), shareText + gameLink);
+            intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_SUBJECT"), subject);
+            intentObject.Call<AndroidJavaObject>("setType", "image/jpeg");
+            AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
+
+            currentActivity.Call("startActivity", intentObject);
+
+        }
+
+        isProcessing = false;
+
+    }
 }
