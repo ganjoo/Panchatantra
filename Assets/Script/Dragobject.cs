@@ -17,7 +17,8 @@ public class Dragobject : MonoBehaviour {
 
 
   void OnMouseUp(){
-
+        if (target == null)
+            return;
      float distance = Vector2.Distance(target.transform.position,transform.position);
     Debug.Log(distance);
     if(distance < 2){
@@ -39,6 +40,7 @@ public class Dragobject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		initialPos = transform.position;
+
 	}
 	
 	// Update is called once per frame
