@@ -21,7 +21,12 @@ public class LevelManager : MonoBehaviour
 #pragma warning restore CS0618 // Type or member is obsolete
         
     }
+    private void Start()
 
+    {
+        GameObject text_obj = GameObject.Find("Player_Info_Text");
+        text_obj.GetComponent<UnityEngine.UI.Text>().text = PlayerStats.name + " : " + PlayerStats.email;
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width * 0.8f && Input.mousePosition.y < Screen.height * 0.2f)
