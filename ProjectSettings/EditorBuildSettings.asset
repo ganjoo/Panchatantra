@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DragSceneSample.unity
-    guid: db23baa6053863d49baf696a1d206ae7
+    path: Assets/Login_with_facebook.unity
+    guid: fccff66d87d5db64d80008817d26996e
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: c6854ec3f2e489649978a3c95c4ef371

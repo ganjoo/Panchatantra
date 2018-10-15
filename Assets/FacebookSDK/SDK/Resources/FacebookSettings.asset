@@ -15,9 +15,9 @@ MonoBehaviour:
   clientTokens:
   - 
   appIds:
-  - 805452509786665
+  - 593478251020983
   appLabels:
-  - Panchatantra
+  - Phonics
   cookie: 1
   logging: 1
   status: 1

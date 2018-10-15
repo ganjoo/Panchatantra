@@ -519,13 +519,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatterDetails:
-    horizontalCuts: 8
-    verticalCuts: 14
+    horizontalCuts: 2
+    verticalCuts: 6
     randomizeAtRunTime: 0
     randomSeed: 0
     randomness: 0.75
-    zigzagFrequency: 0.9
-    zigzagAmplitude: 1
+    zigzagFrequency: 0.518
+    zigzagAmplitude: 0.287
     colliderType: 1
     explodeFrom: {x: 0.5, y: -1}
     explosionForce: {x: 5, y: 5}
