@@ -19,4 +19,10 @@ public class ColorSprite : MonoBehaviour {
         Debug.Log("Coloring the sprite now..");
         GetComponent<SpriteRenderer>().color = current_color;
     }
+    
+    void OnMouseDown()
+    {
+        if(GetComponent<SpriteRenderer>() != null)
+            GetComponent<SpriteRenderer>().color = ColorSprite.current_color;
+    }
 }
