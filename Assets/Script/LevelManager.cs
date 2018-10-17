@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
 #pragma warning disable CS0618 // Type or member is obsolete
         Application.LoadLevel(name);
 #pragma warning restore CS0618 // Type or member is obsolete
-        
+
     }
     private void Start()
 
@@ -32,6 +32,16 @@ public class LevelManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && Input.mousePosition.x > Screen.width * 0.8f && Input.mousePosition.y < Screen.height * 0.2f)
         {
          
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Level load requested for " + name);
+            #pragma warning disable CS0618 // Type or member is obsolete
+                        Application.LoadLevel("Menu");
+            #pragma warning restore CS0618 // Type or member is obsolete
+
+            Screen.orientation = ScreenOrientation.Portrait;
         }
     }
     public void shareImage()
@@ -89,4 +99,6 @@ public class LevelManager : MonoBehaviour
         isProcessing = false;
 
     }
+
+   
 }
