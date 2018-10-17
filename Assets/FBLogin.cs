@@ -44,9 +44,9 @@ public class FBLogin : MonoBehaviour {
         {
             this.Status = "Success - Check log for details";
             this.LastResponse = "Success Response:\n" + result.RawResult;
-            #pragma warning disable CS0618 // Type or member is obsolete
-             Application.LoadLevel("Menu");
-            #pragma warning restore CS0618 // Type or member is obsolete
+           
+
+            FB.API("/me?fields=id,name,email", HttpMethod.GET, GetFacebookInfo, new Dictionary<string, string>() { });
         }
         else
         {
@@ -55,7 +55,26 @@ public class FBLogin : MonoBehaviour {
 
         Debug.Log(result.ToString());
     }
+    public void GetFacebookInfo(IResult result)
+    {
+        if (result.Error == null)
+        {
+            Debug.Log(result.ResultDictionary["id"].ToString());
+            Debug.Log(result.ResultDictionary["name"].ToString());
+            Debug.Log(result.ResultDictionary["email"].ToString());
+            PlayerStats.email = result.ResultDictionary["email"].ToString();
+            PlayerStats.name = result.ResultDictionary["name"].ToString();
 
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            Application.LoadLevel("Menu");
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+        else
+        {
+            Debug.Log(result.Error);
+        }
+    }
     private void OnInitComplete()
     {
         this.Status = "Success - Check log for details";
