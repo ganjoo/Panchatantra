@@ -29,6 +29,8 @@ public class Dragobject : MonoBehaviour {
     if(distance < 2){
       transform.position = target.transform.position;
 
+            //TODO The following delegate requires that targetFound be mapped in some slot(function) in another script in the scene
+            // So before using this as a part of the prefab, please add targetFound receiver in some other script e.g. Score script...
             targetFound();
      
         }
