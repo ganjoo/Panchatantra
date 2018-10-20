@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DragSceneSample.unity
-    guid: db23baa6053863d49baf696a1d206ae7
-  - enabled: 1
     path: Assets/onboarding_screen_1.unity
     guid: cb806f9f8278e5a44a55ce960d6b402b
   - enabled: 1
@@ -29,3 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/activity.unity
     guid: 16e1a25b8f6a8444cabe53713adf5037
+  - enabled: 1
+    path: Assets/color_activity.unity
+    guid: f2fd9b7dc027247eebbe0820c3b5c6f6
+  m_configObjects: {}

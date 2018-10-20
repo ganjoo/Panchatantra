@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     {
         GameObject text_obj = GameObject.Find("Player_Info_Text");
-        text_obj.GetComponent<UnityEngine.UI.Text>().text = PlayerStats.name + " : " + PlayerStats.email;
+        text_obj.GetComponent<UnityEngine.UI.Text>().text ="Hello " + PlayerStats.name;
     }
     private void Update()
     {
