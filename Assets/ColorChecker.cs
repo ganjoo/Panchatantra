@@ -74,7 +74,10 @@ public class ColorChecker : MonoBehaviour {
             if (next_level.Length == 0)
             {
 
-                LevelManager.LoadLevel("Menu");
+                Debug.Log("Level load requested for " + name);
+#pragma warning disable CS0618 // Type or member is obsolete
+                Application.LoadLevel("Menu");
+#pragma warning restore CS0618 // Type or member is obsolete
             }
             else
             {                //Load the prefab specified in the next level

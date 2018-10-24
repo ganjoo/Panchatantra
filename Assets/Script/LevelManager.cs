@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     private string subject = "Rebus Guess The Movie Game";
     private string imageName = "share"; // without the extension, for iinstance, MyPic 
 
-    public static void LoadLevel(string name)
+    public void LoadLevel(string name)
     {
         Debug.Log("Level load requested for " + name);
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -25,7 +25,8 @@ public class LevelManager : MonoBehaviour
 
     {
         GameObject text_obj = GameObject.Find("Player_Info_Text");
-        text_obj.GetComponent<UnityEngine.UI.Text>().text ="Hello " + PlayerStats.name;
+        if(text_obj != null )
+            text_obj.GetComponent<UnityEngine.UI.Text>().text ="Hello " + PlayerStats.name;
     }
     private void Update()
     {

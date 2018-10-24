@@ -6,7 +6,7 @@ public static class PlayerStats
 {
     private static int kills, deaths, assists, points;
 
-    public static string email, name;
+    public static string email, name="";
 
 
     public static int Kills
