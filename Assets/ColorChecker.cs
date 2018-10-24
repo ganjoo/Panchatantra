@@ -56,6 +56,9 @@ public class ColorChecker : MonoBehaviour {
                              ///GameObject next = GameObject.Find(next_level);
                 // next.SetActive(true);
                 gameObject.SetActive(false);
+                
+                ColorSprite.objColored -= CheckColorStatus;
+                Debug.Log("Instantiating " + next_level);
                 GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
 
             }
