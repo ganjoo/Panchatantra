@@ -32,10 +32,12 @@ public class Dragobject : MonoBehaviour {
             //TODO The following delegate requires that targetFound be mapped in some slot(function) in another script in the scene
             // So before using this as a part of the prefab, please add targetFound receiver in some other script e.g. Score script...
             targetFound();
-     
-        }
+            GetComponent<AudioSource>().Play();
+            Debug.Log("Playing audio clip");
 
-    else{
+        }
+        else
+        {
       transform.position = initialPos;
     }
     Debug.Log("Mouse Up");
