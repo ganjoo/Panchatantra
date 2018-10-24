@@ -1,18 +1,44 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorChecker : MonoBehaviour {
 
 
     public string next_level;
+    private int level_started = 0;
+    private int current_time;
     // Use this for initialization
 	void Start () {
         ColorSprite.objColored += CheckColorStatus;
+        level_started = 1;
+        current_time = 0;
+        levelStarted();
     }
 
+    private void levelStarted()
+    {
+        // Start a timer every 1 second
+        StartCoroutine("UpdateLevelTime");
 
-     public void CheckColorStatus()
+       
+
+    }
+    IEnumerator UpdateLevelTime()
+    {
+        while (level_started == 1)
+        {
+            current_time++;
+            GameObject score = GameObject.Find("Score");
+             score.GetComponent<Text>().text = current_time.ToString();
+            yield return new WaitForSeconds(.1f);
+        }
+       
+
+    }
+    public void CheckColorStatus()
     {
         int matched_colors = 0;
         int pieces_count = gameObject.GetComponent<PiecesInfo>().piece_Count;
@@ -58,10 +84,17 @@ public class ColorChecker : MonoBehaviour {
                 gameObject.SetActive(false);
                 
                 ColorSprite.objColored -= CheckColorStatus;
+                levelCompleted();
                 Debug.Log("Instantiating " + next_level);
                 GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
 
             }
         }
+    }
+
+    void levelCompleted()
+    {
+        level_started = 0;
+        //Save current score as high score if more than high score
     }
 }
