@@ -56,7 +56,7 @@ public class ColorChecker : MonoBehaviour {
                              ///GameObject next = GameObject.Find(next_level);
                 // next.SetActive(true);
                 gameObject.SetActive(false);
-                GameObject next = (GameObject)Instantiate(Resources.Load("Crow"));
+                GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
 
             }
         }

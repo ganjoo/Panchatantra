@@ -3374,7 +3374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720361424811b45a88bca1071a24a40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: 
+  next_level: Hunter
 --- !u!114 &114311624031359162
 MonoBehaviour:
   m_ObjectHideFlags: 1

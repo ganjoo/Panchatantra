@@ -8330,7 +8330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720361424811b45a88bca1071a24a40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: 
+  next_level: Mouse
 --- !u!114 &114530521854746718
 MonoBehaviour:
   m_ObjectHideFlags: 1
