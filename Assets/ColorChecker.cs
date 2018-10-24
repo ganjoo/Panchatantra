@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ColorChecker : MonoBehaviour {
 
-	// Use this for initialization
+
+    public string next_level;
+    // Use this for initialization
 	void Start () {
         ColorSprite.objColored += CheckColorStatus;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
      public void CheckColorStatus()
     {
@@ -47,6 +45,20 @@ public class ColorChecker : MonoBehaviour {
         }
         if(matched_colors == pieces_count){
             Debug.Log("DONE COLORED");
+            if (next_level.Length == 0)
+            {
+
+                LevelManager.LoadLevel("Menu");
+            }
+            else
+            {                //Load the prefab specified in the next level
+                             // gameObject.SetActive(false);
+                             ///GameObject next = GameObject.Find(next_level);
+                // next.SetActive(true);
+                gameObject.SetActive(false);
+                GameObject next = (GameObject)Instantiate(Resources.Load("Crow"));
+
+            }
         }
     }
 }

@@ -11,12 +11,12 @@ public class ColorSprite : MonoBehaviour {
     public static ObjColoredCallback objColored;
 
     public Color c;
-	// Use this for initialization
-	void Start () {
-        GameObject btn = GameObject.Find("Red");
-        var color = btn.GetComponent<Image>().color;
-        ColorSprite.current_color = color;
-        }
+    // Use this for initialization
+
+    public void Start()
+    {
+        
+    }
 
 
     public void ColorTheSprite() {
@@ -40,6 +40,14 @@ public class ColorSprite : MonoBehaviour {
 
     }
 
+    public void OnClicked(Button button)
+    {
+        GameObject btn = GameObject.Find(button.name);
+        var color = btn.GetComponent<Image>().color;
+        ColorSprite.current_color = color;
+        print(button.name);
+        Debug.Log("Object clicked " + ColorSprite.current_color);
+    }
 
 
 }
