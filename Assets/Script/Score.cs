@@ -22,6 +22,7 @@ public class Score : MonoBehaviour {
     {
         count = count + 1;
         SetCountText();
+
     }
 
 

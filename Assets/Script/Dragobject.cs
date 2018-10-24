@@ -30,10 +30,12 @@ public class Dragobject : MonoBehaviour {
       transform.position = target.transform.position;
 
             targetFound();
-     
-        }
+            GetComponent<AudioSource>().Play();
+            Debug.Log("Playing audio clip");
 
-    else{
+        }
+        else
+        {
       transform.position = initialPos;
     }
     Debug.Log("Mouse Up");
