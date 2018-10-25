@@ -5,6 +5,7 @@ using UnityEngine;
 public class PiecesInfo : MonoBehaviour {
 
     public int piece_Count;
+    public string level_name;
     // Use this for initialization
 	void Start () {
 		

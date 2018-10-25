@@ -10,8 +10,10 @@ public class ColorChecker : MonoBehaviour {
     public string next_level;
     private int level_started = 0;
     private int current_time;
+    public ProgressBar Pb;
+
     // Use this for initialization
-	void Start () {
+    void Start () {
         ColorSprite.objColored += CheckColorStatus;
         level_started = 1;
         current_time = 0;
@@ -22,8 +24,11 @@ public class ColorChecker : MonoBehaviour {
     {
         // Start a timer every 1 second
         StartCoroutine("UpdateLevelTime");
+        Pb.BarValue = 0;
+        GameObject obj = GameObject.Find("HighScore");
+        obj.GetComponent<Text>().text = PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name).ToString();
 
-       
+        
 
     }
     IEnumerator UpdateLevelTime()
@@ -33,7 +38,8 @@ public class ColorChecker : MonoBehaviour {
             current_time++;
             GameObject score = GameObject.Find("Score");
              score.GetComponent<Text>().text = current_time.ToString();
-            yield return new WaitForSeconds(.1f);
+            Pb.BarValue += 1;
+            yield return new WaitForSeconds(1f);
         }
        
 
@@ -97,7 +103,14 @@ public class ColorChecker : MonoBehaviour {
 
     void levelCompleted()
     {
+        int bonus = 100 - (int)Pb.BarValue;
+        int total_score = (gameObject.GetComponent<PiecesInfo>().piece_Count) * 10 + bonus;
         level_started = 0;
+        if(PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name) == 0)
+            PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
+        if (PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name) < total_score)
+            PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
+
         //Save current score as high score if more than high score
     }
 }
