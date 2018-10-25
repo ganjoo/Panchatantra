@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     private string subject = "Rebus Guess The Movie Game";
     private string imageName = "share"; // without the extension, for iinstance, MyPic 
 
+    public GameObject settingsObj;
     public void LoadLevel(string name)
     {
         Debug.Log("Level load requested for " + name);
@@ -101,5 +102,9 @@ public class LevelManager : MonoBehaviour
 
     }
 
+
+    public void showSettings() {
+        settingsObj.SetActive(true);
+    }
    
 }

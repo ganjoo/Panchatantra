@@ -32,7 +32,8 @@ public class ColorSprite : MonoBehaviour {
         if (GetComponent<SpriteRenderer>() != null)
         {
             GetComponent<SpriteRenderer>().color = ColorSprite.current_color;
-            objColored();
+            if(objColored != null)
+                objColored();
             GetComponent<AudioSource>().Play();
             Debug.Log("Playing audio clip");
            

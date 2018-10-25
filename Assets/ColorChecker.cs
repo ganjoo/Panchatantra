@@ -11,6 +11,8 @@ public class ColorChecker : MonoBehaviour {
     private int level_started = 0;
     private int current_time;
     public ProgressBar Pb;
+    public GameObject popup;
+
 
     // Use this for initialization
     void Start () {
@@ -48,7 +50,6 @@ public class ColorChecker : MonoBehaviour {
     {
         int matched_colors = 0;
         int pieces_count = gameObject.GetComponent<PiecesInfo>().piece_Count;
-
         for (int i = 1; i <= pieces_count; ++i)
         {
             string source_game_obj_name = "Piece_" + i;
@@ -90,12 +91,10 @@ public class ColorChecker : MonoBehaviour {
                              // gameObject.SetActive(false);
                              ///GameObject next = GameObject.Find(next_level);
                 // next.SetActive(true);
-                gameObject.SetActive(false);
-                
+              
                 ColorSprite.objColored -= CheckColorStatus;
                 levelCompleted();
-                Debug.Log("Instantiating " + next_level);
-                GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
+              
 
             }
         }
@@ -110,7 +109,16 @@ public class ColorChecker : MonoBehaviour {
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
         if (PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name) < total_score)
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
+        popup.SetActive(true);
+
 
         //Save current score as high score if more than high score
+    }
+
+    public void onLoadNextLevel() {
+        gameObject.SetActive(false);
+
+        GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
+
     }
 }
