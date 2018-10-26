@@ -38,8 +38,8 @@ public class ColorChecker : MonoBehaviour {
         while (level_started == 1)
         {
             current_time++;
-            GameObject score = GameObject.Find("Score");
-             score.GetComponent<Text>().text = current_time.ToString();
+            //GameObject score = GameObject.Find("Score");
+             //score.GetComponent<Text>().text = current_time.ToString();
             Pb.BarValue += 1;
             yield return new WaitForSeconds(1f);
         }

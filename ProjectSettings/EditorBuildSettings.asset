@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Puzzle_activity_5.unity
     guid: cd0cd44590313491282c24cf3753fa29
   - enabled: 1
+    path: Assets/Scenes/color_activity_UI.unity
+    guid: 38143eb22d3c84cfb834929a1cbc49ff
+  - enabled: 0
     path: Assets/Scenes/color_activity.unity
     guid: 37dadf43142ad488f89e85b1bbda6ef8
   m_configObjects: {}
