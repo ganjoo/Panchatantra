@@ -1112,15 +1112,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 132779120}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1170,8 +1170,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.3490143, y: 1.3609883, z: 1}
+  m_Center: {x: -0.3886754, y: 0.35793012, z: 0}
 --- !u!33 &132779124
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2187,6 +2187,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2246,6 +2250,30 @@ Prefab:
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -2347,6 +2375,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2402,6 +2434,30 @@ Prefab:
     - target: {fileID: 106802, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -2701,6 +2757,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2760,6 +2820,30 @@ Prefab:
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -3045,7 +3129,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: activity
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3370,15 +3454,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 666283288}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -3529,7 +3613,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: activity
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -4325,15 +4409,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 849548417}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -4714,15 +4798,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946723289}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -5431,6 +5515,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5490,6 +5578,30 @@ Prefab:
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -5925,15 +6037,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1206453260}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6135,15 +6247,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1237356229}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6376,15 +6488,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1260032139}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6694,6 +6806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1481bb566ee77a24a8ce2c3154c06eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingsObj: {fileID: 0}
 --- !u!4 &1327360653
 Transform:
   m_ObjectHideFlags: 0
@@ -7076,7 +7189,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: activity
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -8615,7 +8728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1640265599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8996,6 +9109,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9055,6 +9172,30 @@ Prefab:
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -9474,7 +9615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: activity
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -9620,6 +9761,10 @@ Prefab:
       propertyPath: m_Materials.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9679,6 +9824,30 @@ Prefab:
     - target: {fileID: 495540, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1327360652}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431726, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a9e895e6da348328209b58b7889ae6, type: 2}
@@ -9763,15 +9932,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1770250750}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -10346,15 +10515,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1956553036}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -10883,15 +11052,15 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2096395998}
-        m_MethodName: UpdateStar
-        m_Mode: 1
+      - m_Target: {fileID: 1327360652}
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Video_player
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
