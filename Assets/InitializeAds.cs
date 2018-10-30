@@ -8,14 +8,14 @@ public class InitializeAds : MonoBehaviour {
 
 
     // Initialize an InterstitialAd.
-    string adUnitId = "ca-app-pub-5376766505062595/7422702092";
+    string adUnitId = "ca-app-pub-3940256099942544/4411468910";
     InterstitialAd interstitial;
 
     // Use this for initialization
     public void Start()
     {
 #if UNITY_ANDROID
-        string appId = "ca-app-pub-5376766505062595/7422702092";
+        string appId = "ca-app-pub-5376766505062595~5016030605";
 #elif UNITY_IPHONE
             string appId = "ca-app-pub-3940256099942544~1458002511";
 #else
