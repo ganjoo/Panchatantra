@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,10 +17,11 @@ public class LevelManager : MonoBehaviour
     public GameObject settingsObj;
     public void LoadLevel(string name)
     {
+        
         Debug.Log("Level load requested for " + name);
-#pragma warning disable CS0618 // Type or member is obsolete
-        Application.LoadLevel(name);
-#pragma warning restore CS0618 // Type or member is obsolete
+        SceneManager.LoadScene(name);
+        InitializeAds ads = gameObject.GetComponent<InitializeAds>();
+        ads.showInterstitialAd();
 
     }
     private void Start()
