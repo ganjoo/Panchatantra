@@ -12,6 +12,8 @@ public class ColorChecker : MonoBehaviour {
     private int current_time;
     public ProgressBar Pb;
     public GameObject popup;
+    public GameObject settingPop;
+
 
 
     // Use this for initialization
@@ -22,6 +24,9 @@ public class ColorChecker : MonoBehaviour {
         levelStarted();
     }
 
+    public void showsettingPop() {
+        settingPop.SetActive(true);    
+    }
     private void levelStarted()
     {
         // Start a timer every 1 second
