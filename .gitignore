@@ -43,3 +43,5 @@ Thumbs.db
 *.apk
 *.exe
 test/
+ProjectSettings/
+ProjectSettings_/

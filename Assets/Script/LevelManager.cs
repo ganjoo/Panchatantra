@@ -20,8 +20,8 @@ public class LevelManager : MonoBehaviour
         
         Debug.Log("Level load requested for " + name);
         SceneManager.LoadScene(name);
-        InitializeAds ads = gameObject.GetComponent<InitializeAds>();
-        ads.showInterstitialAd();
+       // InitializeAds ads = gameObject.GetComponent<InitializeAds>();
+//        ads.showInterstitialAd();
 
     }
     private void Start()
