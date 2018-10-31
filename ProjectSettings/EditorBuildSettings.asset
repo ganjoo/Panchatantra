@@ -6,6 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/onboarding_screen_1.unity
+    guid: cb806f9f8278e5a44a55ce960d6b402b
+  - enabled: 1
+    path: Assets/Scenes/onboarding_screen_2.unity
+    guid: c276d90fcae233548988defc93d970ea
+  - enabled: 1
+    path: Assets/Scenes/onboarding_screen_3.unity
+    guid: e5105fd3b132a0a46814c0b2ce6e57e8
+  - enabled: 1
+    path: Assets/Scenes/Login_with_facebook.unity
+    guid: fccff66d87d5db64d80008817d26996e
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: c6854ec3f2e489649978a3c95c4ef371
+  - enabled: 1
+    path: Assets/Scenes/color_activity_UI.unity
+    guid: 8f95bef8d4762904aa5b70913d871c30
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_activity_1.unity
+    guid: 525dbc7444fbd4fcc945c04c4fa5f148
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_activity_2.unity
+    guid: 29ffb8f4497ae4687afb4893d8cb72a2
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_activity_3.unity
+    guid: 210e9110ab2db4f10b89416d3eb3e9ea
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_activity_4.unity
+    guid: 5561d635ac6b44c0c9aa451a18c9f808
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_activity_5.unity
+    guid: cd0cd44590313491282c24cf3753fa29
+  - enabled: 1
+    path: Assets/Scenes/video_listing.unity
+    guid: 784d5d88e71581749a213ff506644311
+  - enabled: 1
+    path: Assets/Scenes/Video_player.unity
+    guid: 0b4877923276d427b94b99ff4cddf343
   m_configObjects: {}

@@ -43,8 +43,9 @@ public class ColorChecker : MonoBehaviour {
         while (level_started == 1)
         {
             current_time++;
-            //GameObject score = GameObject.Find("Score");
-             //score.GetComponent<Text>().text = current_time.ToString();
+            GameObject score = GameObject.Find("Score");
+            int total_score = (gameObject.GetComponent<PiecesInfo>().piece_Count) * 10 + (100- current_time);
+            score.GetComponent<Text>().text = total_score.ToString();
             Pb.BarValue += 1;
             yield return new WaitForSeconds(1f);
         }
@@ -114,16 +115,41 @@ public class ColorChecker : MonoBehaviour {
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
         if (PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name) < total_score)
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
+        
         popup.SetActive(true);
-
+        UpdatePopupScore(PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name), total_score);
 
         //Save current score as high score if more than high score
     }
+    void UpdatePopupScore(int high_score, int current_score)
+    {
+        Debug.Log("Updating Popup Score");
+        GameObject obj = GameObject.Find("CurrentScoreText");
+        obj.GetComponent<Text>().text = current_score.ToString();
+
+        GameObject obj1 = GameObject.Find("HighScoreText");
+        obj1.GetComponent<Text>().text = high_score.ToString();
+    }
 
     public void onLoadNextLevel() {
+        GameObject adsManager = GameObject.Find("AdsManager");
+        UnityAdsExample ads = adsManager.GetComponent<UnityAdsExample>();
+        ads.ShowRewardedAd();
         gameObject.SetActive(false);
 
         GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + next_level));
 
+    }
+    public void ReloadLevel()
+    {
+        gameObject.SetActive(false);
+
+        GameObject next = (GameObject)Instantiate(Resources.Load("Prefabs/" + gameObject.GetComponent<PiecesInfo>().level_name));
+    }
+
+    public void hideSettingsDialog()
+    {
+        GameObject settings = GameObject.Find("SettingsColorActivityDialog");
+        settings.SetActive(false);
     }
 }
