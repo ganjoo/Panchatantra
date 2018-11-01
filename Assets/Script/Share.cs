@@ -126,7 +126,7 @@ public class Share : MonoBehaviour {
 #if UNITY_ANDROID
 
         subject = "Test subject.";
-        text = "Test text http://frugalplay.com/";
+        text = "I just used an awesome app for kids' stories. Check it out: https://play.google.com/store/apps/details?id=com.frugalplay.barfitales";
 #endif
 
 #if UNITY_IOS
