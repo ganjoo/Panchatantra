@@ -45,3 +45,7 @@ Thumbs.db
 test/
 ProjectSettings/
 ProjectSettings_/
+Assets/UETools/
+Assets/UETools*
+Assets/Resonai/
+Assets/Resonai*
