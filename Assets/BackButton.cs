@@ -1,19 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackButton : MonoBehaviour {
 
+    public string previous_level;
 
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Level load requested for " + name);
-#pragma warning disable CS0618 // Type or member is obsolete
-            Application.LoadLevel("Menu");
-#pragma warning restore CS0618 // Type or member is obsolete
-
-            Screen.orientation = ScreenOrientation.Portrait;
+            if (previous_level.Length > 0)
+            {
+                SceneManager.LoadScene(previous_level);
+               //Screen.orientation = ScreenOrientation.Portrait;
+            }
+            else
+            {
+                Application.Quit();
+            }
+                
         }
     }
 }

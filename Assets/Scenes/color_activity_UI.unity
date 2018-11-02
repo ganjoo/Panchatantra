@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1097a0006cc44488f107208ee45946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previous_level: Menu
 --- !u!82 &380488648
 AudioSource:
   m_ObjectHideFlags: 0

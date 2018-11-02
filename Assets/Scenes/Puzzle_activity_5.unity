@@ -2840,6 +2840,7 @@ GameObject:
   - component: {fileID: 1459854740}
   - component: {fileID: 1459854739}
   - component: {fileID: 1459854741}
+  - component: {fileID: 1459854742}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -2883,6 +2884,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8490351bc2dea01458c814eac52cdfe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1459854742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459854738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1097a0006cc44488f107208ee45946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previous_level: Menu
 --- !u!1 &1485496091
 GameObject:
   m_ObjectHideFlags: 0

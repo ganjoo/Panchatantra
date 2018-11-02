@@ -47,6 +47,8 @@ public class FBLogin : MonoBehaviour {
            
 
             FB.API("/me?fields=id,name,email", HttpMethod.GET, GetFacebookInfo, new Dictionary<string, string>() { });
+           
+
         }
         else
         {
@@ -65,6 +67,10 @@ public class FBLogin : MonoBehaviour {
             PlayerStats.email = result.ResultDictionary["email"].ToString();
             PlayerStats.name = result.ResultDictionary["name"].ToString();
 
+            //Write fb id, email and name in local db
+            PlayerPrefs.SetString("fb_id", result.ResultDictionary["id"].ToString());
+            PlayerPrefs.SetString("fb_email", result.ResultDictionary["email"].ToString());
+            PlayerPrefs.SetString("fb_name", result.ResultDictionary["name"].ToString());
 
 #pragma warning disable CS0618 // Type or member is obsolete
             Application.LoadLevel("Menu");
