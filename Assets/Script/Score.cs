@@ -21,13 +21,16 @@ public class Score : MonoBehaviour {
     private void UpdateScore()
     {
         count = count + 1;
-        if(count > 4)
+        if (count > 4)
         {
             GameObject adsManager = GameObject.Find("AdsManager");
-            UnityAdsExample ads = adsManager.GetComponent<UnityAdsExample>();
-            ads.ShowRewardedAd();
+            if (adsManager != null)
+            {
+                UnityAdsExample ads = adsManager.GetComponent<UnityAdsExample>();
+                ads.ShowRewardedAd();
+            }
         }
-        SetCountText();
+        //SetCountText();
 
     }
 
