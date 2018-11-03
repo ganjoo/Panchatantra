@@ -106,7 +106,6 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree40Win/_FitDat/eyeL_hi.bmp
   - Assets/NF3DFaceAnimFree40Win/documentation/documentation.txt
   - Assets/NF3DFaceAnimFree40Win/_FitDat/eyeR_hi.tri
-  - Assets/NF3DFaceAnimFree40Win
   - Assets/NF3DFaceAnimFree40Win/_Prefabs/AnimatableMesh.prefab
   - Assets/NF3DFaceAnimFree40Win/_FitDat/eyeR_hi.egm
   - Assets/NF3DFaceAnimFree40Win/_External/System.Threading.dll
@@ -122,6 +121,7 @@ MonoBehaviour:
   - Assets/NF3DFaceAnimFree40Win/_FitDat/eyeR_hazel_hi.png
   - Assets/NF3DFaceAnimFree40Win/Resources/gray02.jpg
   - Assets/NF3DFaceAnimFree40Win/Resources/eye.fbm/green_eye_texture_by_physkomere-d82d3lx.png
+  - Assets/NF3DFaceAnimFree40Win
   - Assets/NF3DFaceAnimFree40Win/_Textures
   - Assets/NF3DFaceAnimFree40Win/_Materials/out_teethUpper.bmp.mat
   - Assets/NF3DFaceAnimFree40Win/_External/Sharp3D.Math.dll

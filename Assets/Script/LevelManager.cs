@@ -108,5 +108,11 @@ public class LevelManager : MonoBehaviour
     public void showSettings() {
         settingsObj.SetActive(true);
     }
-   
+
+    public void EnterAsGuest() {
+
+        PlayerStats.name = "Guest";
+        LoadLevel("Menu");
+
+    }
 }
