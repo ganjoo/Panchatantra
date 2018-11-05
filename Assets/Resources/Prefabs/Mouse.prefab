@@ -5085,7 +5085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720361424811b45a88bca1071a24a40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: Deer
+  next_level: TurtleCrow
   Pb: {fileID: 114118446339851398}
   popup: {fileID: 1830456386906778}
   settingPop: {fileID: 1603782561183546}
