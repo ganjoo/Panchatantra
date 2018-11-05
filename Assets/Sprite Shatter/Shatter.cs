@@ -168,8 +168,8 @@ namespace SpriteShatter {
                             shatterSpriteRenderer.sprite.texture.Apply();
 
                             //Add a rigid body to the shatter game object to ensure it reacts to gravity.
-                            //spriteShatterGameObject.AddComponent<Rigidbody2D>();
-                            spriteShatterGameObject.AddComponent<Dragobject>();
+                            spriteShatterGameObject.AddComponent<Rigidbody2D>();
+                            //spriteShatterGameObject.AddComponent<Dragobject>();
 
                             //Create the necessary collider.
                             bool colliderCouldNotBeCreated = false;

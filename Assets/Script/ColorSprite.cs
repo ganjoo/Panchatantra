@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SpriteShatter;
 public class ColorSprite : MonoBehaviour {
 
 
@@ -22,8 +23,10 @@ public class ColorSprite : MonoBehaviour {
     public void ColorTheSprite() {
         Debug.Log("Coloring the sprite now..");
         GetComponent<SpriteRenderer>().color = current_color;
-        objColored();
 
+
+        objColored();
+        //Say the color name
 
     }
 
@@ -33,14 +36,28 @@ public class ColorSprite : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().color = ColorSprite.current_color;
             if(objColored != null)
+            {
                 objColored();
+                //GetComponent<Shatter>().shatter();
+                //StartCoroutine(Wait(1f));
+                
+            }
+                
             GetComponent<AudioSource>().Play();
             Debug.Log("Playing audio clip");
            
         }
 
     }
-
+    IEnumerator Wait(float duration)
+    {
+        //This is a coroutine
+        Debug.Log("Start Wait() function. The time is: " + Time.time);
+        Debug.Log("Float duration = " + duration);
+        yield return new WaitForSeconds(duration);   //Wait
+        GetComponent<Shatter>().reset();
+        Debug.Log("End Wait() function and the time is: " + Time.time);
+    }
     public void OnClicked(Button button)
     {
         GameObject btn = GameObject.Find(button.name);
