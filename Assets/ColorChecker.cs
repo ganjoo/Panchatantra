@@ -115,9 +115,11 @@ public class ColorChecker : MonoBehaviour {
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
         if (PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name) < total_score)
             PlayerPrefs.SetInt(gameObject.GetComponent<PiecesInfo>().level_name, total_score);
-        
-        popup.SetActive(true);
-        UpdatePopupScore(PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name), total_score);
+        Share share_obj = gameObject.GetComponent<Share>();
+        share_obj.CaptureScreenshot();
+        StartCoroutine(WaitForScreenshot(total_score));
+
+
 
         //Save current score as high score if more than high score
     }
@@ -151,5 +153,12 @@ public class ColorChecker : MonoBehaviour {
     {
         GameObject settings = GameObject.Find("SettingsColorActivityDialog");
         settings.SetActive(false);
+    }
+
+    IEnumerator WaitForScreenshot(int total_score)
+    {
+        yield return new WaitForSeconds(2);
+        popup.SetActive(true);
+        UpdatePopupScore(PlayerPrefs.GetInt(gameObject.GetComponent<PiecesInfo>().level_name), total_score);
     }
 }

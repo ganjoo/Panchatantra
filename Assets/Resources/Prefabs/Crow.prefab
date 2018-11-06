@@ -6218,7 +6218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720361424811b45a88bca1071a24a40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: Deer
+  next_level: Mouse
   Pb: {fileID: 114505691053756226}
   popup: {fileID: 1918407392441248}
   settingPop: {fileID: 1470339198534744}

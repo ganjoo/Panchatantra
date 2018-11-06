@@ -22,6 +22,24 @@ public class Share : MonoBehaviour {
         StartCoroutine(delayedShare(screenShotPath, text));
     }
 
+
+    public void CaptureScreenshot()
+    {
+        string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
+        if (File.Exists(screenShotPath)) File.Delete(screenShotPath);
+
+        ScreenCapture.CaptureScreenshot(ScreenshotName);
+
+    }
+
+
+    public void ShareScreenshotwithText_OnlyShare(String text)
+    {
+        string screenShotPath = Application.persistentDataPath + "/" + ScreenshotName;
+        StartCoroutine(delayedShare(screenShotPath, text));
+    }
+
+
     //CaptureScreenshot runs asynchronously, so you'll need to either capture the screenshot early and wait a fixed time
     //for it to save, or set a unique image name and check if the file has been created yet before sharing.
     IEnumerator delayedShare(string screenShotPath, string text)
@@ -73,8 +91,49 @@ public class Share : MonoBehaviour {
         Save_Screenshot(screenshot);
     }
 
+    //---------- Screenshot ----------//
+    public void Static_Share_Image()
+    {
+        // Short way
+        StartCoroutine(GetStatic_Share_Image());
+    }
+
+    //---------- Get Screenshot ----------//
+    public IEnumerator GetStatic_Share_Image()
+    {
+        yield return new WaitForEndOfFrame();
+
+        // Get Screenshot
+        Texture2D screenshot;
+        screenshot = new Texture2D((int)width, (int)height, TextureFormat.ARGB32, false);
+        screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0, false);
+        screenshot.Apply();
+
+        // Save Screenshot
+        Save_Static_Image(screenshot);
+    }
+
+
+
     //---------- Save Screenshot ----------//
     private void Save_Screenshot(Texture2D screenshot)
+    {
+        string screenShotPath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd-MM-yyyy_HH:mm:ss") + "_" + ScreenshotName;
+
+        //Added the following two lines to simply share a static image from Resources
+        //byte[] dataToSave = Resources.Load<TextAsset>(imageName).bytes;
+        //File.WriteAllBytes(screenShotPath, dataToSave);
+
+        //Uncomment the following line and comment the above two lines to enable screenshot sharing
+        File.WriteAllBytes(screenShotPath, screenshot.EncodeToPNG());
+
+        // Native Share
+        StartCoroutine(DelayedShare_Image(screenShotPath));
+    }
+
+
+    //---------- Save Screenshot ----------//
+    private void Save_Static_Image(Texture2D screenshot)
     {
         string screenShotPath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd-MM-yyyy_HH:mm:ss") + "_" + ScreenshotName;
 
